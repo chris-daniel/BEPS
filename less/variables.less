@@ -1,0 +1,47 @@
+// VARIABLES
+
+
+@padding-base:     			1rem;
+@margin-base:     			1rem;
+
+
+// XLarge screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-xlg:                  1360px;
+@screen-xlg-min:              @screen-xlg;
+@screen-lg-max:              (@screen-lg-min - 1);
+
+
+// -- Fonts
+@font-family-sans-serif:  	'Open Sans', Arial, sans-serif;
+@font-size-base:          	1rem;
+@headings-font-family:    	Roboto, Arial, sans-serif;
+
+
+// -- Colours
+@black:						#333;
+@white:						#FFF;
+
+@grey: 						#E6EBE9;
+@lt-grey:              		lighten(@grey, 5%);
+@dk-grey:              		darken(@grey, 5%);
+@text-grey:					#858b93;
+
+@dk-blue:					#072133;
+@oecd-blue:					#00629B;
+@yellow:					#FFC20E;
+@substance:					#28C0C2;
+
+
+// MIXINS
+
+.remove-list-style() {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.border-radius(@radius) {
+  border-radius: @radius;
+  border-radius: @radius;
+}

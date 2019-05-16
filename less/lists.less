@@ -1,0 +1,42 @@
+// LISTS
+
+
+ul {
+	
+	&.content-list {
+		.remove-list-style();
+
+		li {
+			margin-bottom: @margin-base*2;
+
+			@media (min-width: @screen-md-min) {
+				margin-bottom: @margin-base*3;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			h2 {
+				font-size: @font-size-base * 1.375;
+			}
+		}
+
+		&.news {
+
+			li {
+				border-left: 10px solid @yellow;
+				padding-left: @padding-base;
+
+				p {
+					color: @text-grey;
+					font-size: @font-size-base * .85;
+				}
+
+				&:focus, &:hover {
+					border-left: 10px solid @oecd-blue;
+				}
+			}
+		}
+	}
+}

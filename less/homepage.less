@@ -1,0 +1,44 @@
+// HOMEPAGE
+
+
+// -- Header
+.homepage-header {
+	background-size: cover;	
+	background-position: bottom left;
+	min-height: 25rem;
+	padding: @padding-base*2 0;
+	color: @white;
+
+	a {
+		color: @white;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		min-height: 30rem;
+	}
+
+	@media (min-width: @screen-md-min) {
+		min-height: 35rem;
+		padding: @padding-base*3 0;
+		
+		h1 {
+			font-size: @font-size-base * 3.25;
+		}
+
+		p, a {
+			font-size: @font-size-base * 1.375;
+			width: 90%;
+		}
+	}
+
+	@media (min-width: @screen-lg-min) {
+		min-height: 45rem;
+		padding: @padding-base*5 0;
+
+		p, a {
+			width: 80%;
+		}
+	}
+}

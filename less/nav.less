@@ -1,0 +1,327 @@
+// NAVIGATION
+
+
+// -- Top
+header {
+
+	.row {
+		padding: @padding-base*.5 0;
+
+		div {
+
+			&:first-child {
+				display: flex;
+				justify-content: space-between;
+
+				@media (min-width: @screen-sm-min) {
+					display: inline-block;
+				}
+			}
+		}
+	
+		a {
+			display: inline-block;
+			height: 2rem;
+			background-size: auto 100%;	
+			background-position: top left;
+			background-repeat: no-repeat;
+			text-indent: -2000rem;
+			margin: @margin-base*.5 0;
+
+			&.oecd-logo {
+				background-image: url(../images/oecd-logo-mb.png);
+				width: 8.3rem;
+			}
+
+			&.g20-logo {
+				background-image: url(../images/g20-japan-logo.png);
+				background-position: top right;
+				width: 4.2rem;
+				height: 3rem;
+				margin-bottom: 0;
+			}
+
+			&.beps-logo {
+				background-image: url(../images/beps-logo.svg);
+				width: 19rem;
+				height: 2.5rem;
+			}
+
+			@media (min-width: @screen-sm-min) {
+
+				&.oecd-logo {
+					margin-right: @margin-base;
+				}
+
+				&.beps-logo {
+					float: right;
+					background-position: top right;
+				}
+			}
+
+			@media (min-width: @screen-md-min) {
+				height: 3.25rem;
+
+				&.oecd-logo {
+					background-image: url(../images/oecd-logo.png);
+					width: 11.3rem;
+				}
+
+				&.g20-logo {
+					width: 4.2rem;
+				}
+
+				&.beps-logo {
+					width: 26.5rem;
+					height: 3.5rem;
+				}
+			}
+
+			@media (min-width: @screen-lg-min) {
+				height: 4.3rem;
+
+				&.oecd-logo {
+					width: 14.2rem;
+				}
+
+				&.g20-logo {
+					width: 5.25rem;
+				}
+
+				&.beps-logo {
+					width: 33rem;
+					height: 4.375rem;
+				}
+			}
+		}
+
+		form {
+			padding: @padding-base*.5 0;
+
+			@media (min-width: @screen-sm-min) {
+				width: 18.75rem;
+				float: right;
+			}
+
+			@media (min-width: @screen-md-min) {
+				width: 15.75rem;
+			}
+
+			@media (min-width: @screen-lg-min) {
+				width: 19.7rem;
+			}
+
+			input {
+				display: block;
+				text-transform: uppercase;
+				font-weight: 700;
+
+				&[type=text] {
+					width: 100%;
+					padding-right: 40px;
+				}
+
+				&[type=submit] {
+					background-size: 25px 25px;	
+					background-position: center;
+					background-repeat: no-repeat;
+					background-image: url(../images/search-icon.svg);
+					text-indent: -2000rem;
+					width: 40px;
+					float:right;
+					margin-top: -40px;
+				}
+			}
+		}
+	}
+	
+	nav {
+		background: @dk-blue;
+		color: @white;
+
+		ul {
+			.remove-list-style();
+			padding: @padding-base*.5 0 @padding-base*.75;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			@media (min-width: @screen-md-min) {
+				display: flex;
+				justify-content: space-between;
+				padding: @padding-base*.75 0;
+			}
+
+			a {
+
+				&:link, &:active, &:visited {
+					text-decoration: none;
+					color: @white;
+					display: inline-block;
+					padding: @padding-base*.5 0;
+					border-bottom: 2px solid @dk-blue;
+				}
+				&:focus, &:hover,
+				&.selected {
+					text-decoration: none;
+					border-bottom: 2px solid @white;
+				}
+			}	
+		}	
+	}
+}
+
+
+// -- Footer
+footer {
+	
+	section {
+
+		&.lt-grey {
+
+			p {
+				font-family: @headings-font-family;
+				font-weight: 700;
+				max-width: 15rem;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			img {
+				margin: @margin-base auto;
+				max-width: 15rem;
+			}
+
+			@media (min-width: @screen-md-min) {
+				padding: @padding-base*2 0;
+
+				p {
+					max-width: 20rem;
+				}
+
+				img {
+					max-width: 20rem;
+				}
+			}
+		}
+
+		&.dk-blue {
+
+			ul {
+				.remove-list-style();
+			}
+
+			.row {
+
+				&:first-child {
+
+					a {
+						display: inline-block;
+						height: 2rem;
+						background-size: 100% auto;	
+						background-position: top left;
+						background-repeat: no-repeat;
+						text-indent: -2000rem;
+
+						&.oecd-logo {
+							background-image: url(../images/oecd-logo-white.png);
+							width: 8.3rem;
+						}
+					}
+
+					[class*='col-'] {
+						padding-bottom: @padding-base*4;
+
+						ul {
+							display: flex;
+							justify-content: flex-start;
+
+							@media (min-width: @screen-sm-min) {
+								justify-content: flex-end;
+							}
+
+							li {
+								font-family: @headings-font-family;
+								font-weight: 700;
+								font-size: @font-size-base*1.375;
+								align-self: center;
+								padding-left: @padding-base*1.25;
+
+								&:first-child {
+									padding-left: 0;
+									padding-right: @padding-base*.5;
+								}
+
+								a {
+									width: 2rem;
+									height: 2rem;
+									background-position: center bottom;
+
+									&.twitter {
+										background-image: url(../images/twitter.svg);
+									}
+									&.linkedin {
+										background-image: url(../images/linkedin.svg);
+									}
+									&.email {
+										background-image: url(../images/email.svg);
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&:last-child {
+
+					[class*='col-'] {
+
+						ul {
+
+							li {
+								color: @text-grey;
+								font-size: @font-size-base*.85;
+
+								a {
+
+									&:link, &:active, &:visited {
+										color: @text-grey;
+										text-decoration: none;
+									}
+
+									&:focus, &:hover {
+										text-decoration: underline;
+									}
+								}
+
+								@media (min-width: @screen-sm-min) {
+									display: inline;
+									padding: 0 @padding-base;
+									border-right: 1px solid @text-grey;
+
+									&:first-child {
+										padding-left: 0;
+									}
+									&:last-child {
+										border-right: 0;
+									}
+								}
+							}
+						}
+
+						p {
+							color: @text-grey;
+							font-size: @font-size-base*.85;
+
+							@media (min-width: @screen-md-min) {
+								text-align: right;
+								margin-top: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

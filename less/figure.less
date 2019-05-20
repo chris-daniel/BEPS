@@ -1,0 +1,30 @@
+.figure {
+	display: block;
+
+	h3 {
+		font-size: @font-size-base * 3.25;
+	}
+
+	@media (min-width: @screen-md-min) {
+		text-align: center;
+
+		p {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	@media (min-width: @screen-lg-min) {
+		text-align: center;
+
+		h3 {
+			font-size: @font-size-base * 3.875;
+		}
+
+		p {
+			font-size: @font-size-base * 1.375;
+			width: 85%;
+		}
+	}
+}

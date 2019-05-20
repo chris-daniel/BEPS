@@ -12,6 +12,45 @@ h1, h2, h3, h4, h5 {
 	margin: 0 0 @margin-base 0;
 }
 h1 {
+	font-size: @font-size-base * 2.5;
+	margin: 0 0 @margin-base*2 0;
+
+	span {
+		background-image: linear-gradient( transparent 55%, @yellow 45% );
+	}
+
+	@media (min-width: @screen-md-min) {
+		margin: 0 0 @margin-base*3 0;
+		font-size: @font-size-base * 3.25;
+
+		&.dash {
+			position: relative;
+			padding-left: 70px;
+
+			span {
+
+				&:first-child {
+					display: block;
+					position: absolute;
+					top: 22px;
+					left: 0;
+					background: @black;
+					height: 2px;
+					width: 40px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: @screen-lg-min) {
+		margin: 0 0 @margin-base*4 0;
+	}
+
+	&.no-m {
+		margin-bottom: 0;
+	}
+}
+h2 {
 	font-size: @font-size-base * 2.25;
 	margin: 0 0 @margin-base*2 0;
 
@@ -46,14 +85,11 @@ h1 {
 		margin: 0 0 @margin-base*4 0;
 	}
 }
-h2 {
+h3 {
 	font-size: @font-size-base * 2;
 }
-h3, h4 {
-	font-size: @font-size-base * 1.375;
-}
 h4 {
-	font-weight: 400;
+	font-size: @font-size-base * 1.375;
 }
 
 p {
@@ -68,7 +104,34 @@ strong {
 	font-weight: 700;
 }
 
+em {
+	
+	&.tag {
+		display: inline-block;
+		text-transform: uppercase;
+		background: var(--fullcolor);
+		font-size: @font-size-base*.85;
+		padding: @padding-base*.25 @padding-base*.5;
+		position: relative;
+		height: 28px;
+		margin-right: @margin-base*.5;
+		margin-bottom: @margin-base*.5;
+		color: @white;
+
+		span {
+	      width: 0;
+	      height: 0;
+	      border-top: 28px solid var(--fullcolor);
+	      border-right: 10px solid transparent;
+	      position: absolute;
+	      top: 0;
+	      right: -10px;
+		}
+	}
+}
+
 a {
+
 	&:link, &:active, &:visited {
 		text-decoration: underline;
 		color: @oecd-blue;
@@ -88,6 +151,28 @@ a {
 
 		&[class*='col-'] {
 			text-decoration: none;
+		}
+
+		&.contact {
+			display: block;
+			font-weight: 700;
+			color: @white;
+			background: @oecd-blue;
+			text-decoration: none;
+			padding: @padding-base*1.5 @padding-base*2;
+			margin: 0 0 @margin-base*.5 0;
+
+			@media (min-width: @screen-lg-min) {
+				font-size: @font-size-base * 1.375;
+			}
+
+			&.green {
+				background: @oecd-green;
+			}
+
+			&.brt-blue {
+				background: @brt-blue;
+			}
 		}
 	}
 	&:focus, &:hover {

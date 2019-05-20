@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BEPS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+<link rel="stylesheet" type="text/css" href="index.css"></link>
+<link rel="stylesheet" type="text/css" href="jquery-ui.css"></link>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+
+<div class="video-wrapper">
+    <video id="video" width="100%" playsinline autoplay muted>
+        <source src="OECD_script_1.mp4" type="video/mp4">
+    </video>
+
+    <div id="slider-range"></div>
+    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    <div id="button" class="play-button" onClick="resumeVideo()"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

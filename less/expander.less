@@ -1,0 +1,78 @@
+.expander {
+	position: relative;
+
+	a {
+
+		&.expand-all {
+			display: inline-block;
+			position: absolute;
+			top: -2rem;
+			right: 0;
+			display: none;
+		}
+	}
+	
+	h3 {
+		margin-top: @margin-base*2;
+		border-top: 2px solid @grey;
+		padding-top: @padding-base;
+		font-size: @font-size-base * 1.75;
+
+		@media (min-width: @screen-md-min) {
+			margin-top: @margin-base*3;
+		}
+
+		a {
+			text-decoration: none;
+			display: block;
+			position: relative;
+			padding-right: 50px;
+
+			@media (min-width: @screen-md-min) {
+				padding-right: 0;
+				padding-left: 70px;
+			}
+
+			span {
+				display: block;
+				width: 30px;
+				height: 2px;
+				background: @oecd-blue;
+				position: absolute;
+				top: 15px;
+				right: 0;
+				display: none;
+
+				&:last-child {
+					width: 2px;
+					height: 30px;
+					top: 1px;
+					right: 14px;
+					display: none;
+				}
+
+				@media (min-width: @screen-md-min) {
+					right: auto;
+					left: 10px;
+					display: block;
+
+					&:last-child {
+						right: auto;
+						left: 24px;
+					}
+				}
+			}
+		}
+	}
+
+	.inline-copy {
+
+		:first-child {
+			margin-top: 0;
+			padding-top: @padding-base;
+		}
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

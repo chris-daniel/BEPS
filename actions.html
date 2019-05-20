@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>BEPS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,9 @@
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Roboto:400,400i,700,700i" rel="stylesheet">
 <link href="css/default.css" media="screen" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/general.js"></script>
 
 </head>
 <body>
@@ -27,12 +30,21 @@
 			</div>
 		</div>
 	</div>
-	<nav>
+	<nav aria-label="Main navigation">
 		<div class="container">
+			<a href="" class="open-menu" aria-haspopup="true" aria-expanded="false">Show and hide the menu</a>
 			<ul>
 				<li><a href="">Home</a></li>
-				<li><a href="">About</a></li>
-				<li><a href="" class="selected">BEPS Actions</a></li>
+				<li>
+					<a href="" class="selected sub-menu" aria-haspopup="true" aria-expanded="false">About <span></span></a>
+					<ul>
+						<li><a href="">Mission and impact</a></li>
+						<li><a href="">How the BEPS Project works</a></li>
+						<li><a href="">Tools for implementation</a></li>
+						<li><a href="">History of the G20 &amp; BEPS</a></li>
+					</ul>
+				</li>
+				<li><a href="">BEPS Actions</a></li>
 				<li><a href="">Bitesize BEPS</a></li>
 				<li><a href="">Tax Transparency</a></li>
 				<li><a href="">News &amp; Events</a></li>
@@ -51,66 +63,90 @@
 		<section>
 			<div class="container">
 				<div class="row display-flex">
-					<a href="" class="col-sm-4 action">
-						<div>
+					<a href="" class="col-md-4 action">
+						<div style="background-image: url(images/home-header-temp.jpg);">
 							<div>
-								<em>Horizontal <span></span></em>
-								<h2><span>Action 1</span> Digital Economy</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
-								<p>Read more</p>
+								<div>
+									<em class="tag horizontal">Horizontal <span></span></em>
+									<h2><span>Action 1</span> Digital Economy</h2>
+									<div class="snippet">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+										<p>Read more</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</a>
-					<a href="" class="col-sm-4 action">
-						<div>
+					<a href="" class="col-md-4 action">
+						<div style="background-image: url(images/temp.jpg);">
 							<div>
-								<em>Horizontal <span></span></em>
-								<em>Transparency <span></span></em>
-								<h2><span>Action 1</span> Digital Economy</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
-								<p>Read more</p>
+								<div>
+									<em class="tag coherance">Coherance <span></span></em>
+									<h2><span>Action 1</span> Digital Economy</h2>
+									<div class="snippet">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+										<p>Read more</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</a>
-					<a href="" class="col-sm-4 action">
-						<div>
+					<a href="" class="col-md-4 action">
+						<div style="background-image: url(images/home-header-temp.jpg);">
 							<div>
-								<em>Horizontal <span></span></em>
-								<h2><span>Action 1</span> Digital Economy</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
-								<p>Read more</p>
+								<div>
+									<em class="tag horizontal">Horizontal <span></span></em>
+									<em class="tag transparency">Transparency <span></span></em>
+									<h2><span>Action 1</span> Digital Economy</h2>
+									<div class="snippet">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+										<p>Read more</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</a>
 				</div>
 				<div class="row display-flex">
-					<a href="" class="col-sm-4 action">
-						<div>
+					<a href="" class="col-md-4 action">
+						<div style="background-image: url(images/temp.jpg);">
 							<div>
-								<em>Horizontal <span></span></em>
-								<h2><span>Action 1</span> Digital Economy</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
-								<p>Read more</p>
+								<div>
+									<em class="tag substance">Substance <span></span></em>
+									<h2><span>Action 1</span> Permanent Establishment Status</h2>
+									<div class="snippet">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+										<p>Read more</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</a>
-					<a href="" class="col-sm-4 action">
-						<div>
+					<a href="" class="col-md-4 action">
+						<div style="background-image: url(images/temp.jpg);">
 							<div>
-								<em>Horizontal <span></span></em>
-								<h2><span>Action 1</span> Digital Economy</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
-								<p>Read more</p>
+								<div>
+									<em class="tag horizontal">Horizontal <span></span></em>
+									<h2><span>Action 1</span> Digital Economy</h2>
+									<div class="snippet">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+										<p>Read more</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</a>
-					<a href="" class="col-sm-4 action">
-						<div>
+					<a href="" class="col-md-4 action">
+						<div style="background-image: url(images/temp.jpg);">
 							<div>
-								<em>Horizontal <span></span></em>
-								<h2><span>Action 1</span> Digital Economy</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
-								<p>Read more</p>
+								<div>
+									<em class="tag horizontal">Horizontal <span></span></em>
+									<h2><span>Action 1</span> Digital Economy</h2>
+									<div class="snippet">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+										<p>Read more</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</a>
@@ -120,26 +156,26 @@
 		<aside>
 			<section class="grey no-m tb-pad">
 				<div class="container">
-					<h1 class="dash"><span></span>Featured <span>content</span></h1>
+					<h2 class="dash"><span></span>Featured <span>content</span></h2>
 					<div class="row display-flex">
 						<a href="" class="col-sm-4 card">
 							<img src="images/temp.jpg" alt="" />
 							<div>
-								<h2>New database provides critical indicators for the analysis of BEPS</h2>
+								<h3>New database provides critical indicators for the analysis of BEPS</h3>
 								<p><span></span>JUNE 2018  |  <strong>DATABASE</strong></p>
 							</div>
 						</a>
 						<a href="" class="col-sm-4 card">
 							<img src="images/temp.jpg" alt="" />
 							<div>
-								<h2>New database provides critica</h2>
+								<h3>New database provides critica</h3>
 								<p><span></span>JUNE 2018  |  <strong>DATABASE</strong></p>
 							</div>
 						</a>
 						<a href="" class="col-sm-4 card">
 							<img src="images/temp.jpg" alt="" />
 							<div>
-								<h2>New database provides critica</h2>
+								<h3>New database provides critica</h3>
 								<p><span></span>JUNE 2018  |  <strong>DATABASE</strong></p>
 							</div>
 						</a>
@@ -150,13 +186,13 @@
 	</article>
 </main>
 <footer>
-	<section class="lt-grey tb-pad no-m">
+	<div class="section lt-grey tb-pad no-m">
 		<div class="container">
 			<p>With the support of</p>
 			<img src="images/japan-logo.png" alt="JapanGov The Government of Japan" />
 		</div>
-	</section>
-	<section class="dk-blue tb-pad no-m">
+	</div>
+	<div class="section dk-blue tb-pad no-m">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
@@ -185,8 +221,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </footer>
+
+<div class="media-test"></div>
 
 </body>
 </html>

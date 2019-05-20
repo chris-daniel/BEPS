@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>BEPS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,9 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Roboto:400,400i,700,700i" rel="stylesheet">
 <link href="css/default.css" media="screen" rel="stylesheet" type="text/css" />
 
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/general.js"></script>
+
 </head>
 <body>
 
@@ -15,7 +18,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-				<a href="" class="oecd-logo">OECD logo</a>
+				<a href="" class="oecd-logo" aria-label="Return to the homepage">OECD logo</a>
 				<a href="" class="g20-logo">G20 2019 Japan logo</a>
 			</div>
 			<div class="col-sm-6">
@@ -27,11 +30,20 @@
 			</div>
 		</div>
 	</div>
-	<nav>
+	<nav aria-label="Main navigation">
 		<div class="container">
+			<a href="" class="open-menu" aria-haspopup="true" aria-expanded="false">Show and hide the menu</a>
 			<ul>
 				<li><a href="">Home</a></li>
-				<li><a href="" class="selected">About</a></li>
+				<li>
+					<a href="" class="selected sub-menu" aria-haspopup="true" aria-expanded="false">About <span></span></a>
+					<ul>
+						<li><a href="">Mission and impact</a></li>
+						<li><a href="">How the BEPS Project works</a></li>
+						<li><a href="">Tools for implementation</a></li>
+						<li><a href="">History of the G20 &amp; BEPS</a></li>
+					</ul>
+				</li>
 				<li><a href="">BEPS Actions</a></li>
 				<li><a href="">Bitesize BEPS</a></li>
 				<li><a href="">Tax Transparency</a></li>
@@ -46,28 +58,29 @@
 			<div class="container">
 				<h1>What is BEPS?</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-				<img src="images/temp.jpg" alt="" />
+				<iframe title="What is BEPS interactive animation" src="animation-test/index.html"></iframe>
 			</div>
 		</header>
 		<section>
 			<div class="container">
-				<h1 class="dash"><span></span>Mission and <span>impact</span></h1>
+				<h2 class="dash"><span></span>Mission and <span>impact</span></h2>
 				<div class="inline-copy">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 				</div>
 				<div class="expander">
-					<h2><a href="">What is the issue? <span></span><span></span></a></h2>
-					<div class="inline-copy">
+					<a href="" class="expand-all">Expand all</a>
+					<h3><a href="" aria-expanded="true" aria-controls="accord1sec1" id="acc1sec1">What is the issue? <span></span><span></span></a></h3>
+					<div class="inline-copy" id="accord1sec1" aria-labelledby="acc1sec1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<iframe title="What is BEPS interactive animation" src="animation-test/index.html"></iframe>
+					</div>
+					<h3><a href="" aria-expanded="true" aria-controls="accord1sec2" id="acc1sec2">What are we doing to solve it? <span></span><span></span></a></h3>
+					<div class="inline-copy" id="accord1sec2" aria-labelledby="acc1sec2">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					</div>
-					<h2><a href="">What are we doing to solve it? <span></span><span></span></a></h2>
-					<div class="inline-copy">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-					</div>
-					<h2><a href="">What are the expected results? <span></span><span></span></a></h2>
-					<div class="inline-copy">
+					<h3><a href="" aria-expanded="true" aria-controls="accord1sec3" id="acc1sec3">What are the expected results? <span></span><span></span></a></h3>
+					<div class="inline-copy" id="accord1sec3" aria-labelledby="acc1sec3">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					</div>
@@ -76,18 +89,18 @@
 		</section>
 		<section class="dk-blue no-m tb-pad key-figures">
 			<div class="container">
-				<h1 class="dash"><span></span>Key figures</h1>
+				<h2 class="dash"><span></span>Key figures</h2>
 				<div class="row-no-gutters">
 					<a href="" class="col-md-4 figure">
-						<h2>125+</h2>
+						<h3>125+</h3>
 						<p>countries and jurisdictions collaborate on the implementation of the BEPS Package</p>
 					</a>
 					<a href="" class="col-md-4 figure">
-						<h2>&dollar;240 billion</h2>
+						<h3>&dollar;240 billion</h3>
 						<p>countries and jurisdictions collaborate on the implementation of the BEPS Package</p>
 					</a>
 					<a href="" class="col-md-4 figure">
-						<h2>125+</h2>
+						<h3>125+</h3>
 						<p>countries and jurisdictions collaborate on the implementation of the BEPS Package</p>
 					</a>
 				</div>
@@ -95,21 +108,22 @@
 		</section>
 		<section>
 			<div class="container">
-				<h1 class="dash"><span></span>How it <span>works</span></h1>
+				<h2 class="dash"><span></span>How it <span>works</span></h2>
 				<div class="inline-copy">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 				</div>
 				<div class="expander">
-					<h2><a href="">Membership <span></span><span></span></a></h2>
-					<div class="inline-copy">
+					<a href="" class="expand-all">Expand all</a>
+					<h3><a href="" aria-expanded="true" aria-controls="accord2sec1" id="acc2sec1">Membership <span></span><span></span></a></h3>
+					<div class="inline-copy" id="accord2sec1" aria-labelledby="acc2sec1">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					</div>
-					<h2><a href="">Structure <span></span><span></span></a></h2>
-					<div class="inline-copy">
+					<h3><a href="" aria-expanded="true" aria-controls="accord2sec2" id="acc2sec2">Structure <span></span><span></span></a></h3>
+					<div class="inline-copy" id="accord2sec2" aria-labelledby="acc2sec2">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					</div>
-					<h2><a href="">Other organisations <span></span><span></span></a></h2>
-					<div class="inline-copy">
+					<h3><a href="" aria-expanded="true" aria-controls="accord2sec3" id="acc2sec3">Other organisations <span></span><span></span></a></h3>
+					<div class="inline-copy" id="accord2sec3" aria-labelledby="acc2sec3">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					</div>
 				</div>
@@ -117,7 +131,7 @@
 		</section>
 		<section>
 			<div class="container">
-				<h1 class="dash"><span></span>History of the <span>G20 &amp; BEPS</span></h1>
+				<h2 class="dash"><span></span>History of the <span>G20 &amp; BEPS</span></h2>
 				<div class="inline-copy">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					<img src="images/temp.jpg" alt="" />
@@ -127,26 +141,26 @@
 		<aside>
 			<section class="grey no-m tb-pad">
 				<div class="container">
-					<h1 class="dash"><span></span>Background <span>documents</span></h1>
+					<h2 class="dash"><span></span>Background <span>documents</span></h2>
 					<div class="row display-flex">
 						<a href="" class="col-sm-4 card">
 							<img src="images/temp.jpg" alt="" />
 							<div>
-								<h2>New database provides critical indicators for the analysis of BEPS</h2>
+								<h3>New database provides critical indicators for the analysis of BEPS</h3>
 								<p><span></span>JUNE 2018  |  <strong>DATABASE</strong></p>
 							</div>
 						</a>
 						<a href="" class="col-sm-4 card">
 							<img src="images/temp.jpg" alt="" />
 							<div>
-								<h2>New database provides critica</h2>
+								<h3>New database provides critica</h3>
 								<p><span></span>JUNE 2018  |  <strong>DATABASE</strong></p>
 							</div>
 						</a>
 						<a href="" class="col-sm-4 card">
 							<img src="images/temp.jpg" alt="" />
 							<div>
-								<h2>New database provides critica</h2>
+								<h3>New database provides critica</h3>
 								<p><span></span>JUNE 2018  |  <strong>DATABASE</strong></p>
 							</div>
 						</a>
@@ -157,13 +171,13 @@
 	</article>
 </main>
 <footer>
-	<section class="lt-grey tb-pad no-m">
+	<div class="section lt-grey tb-pad no-m">
 		<div class="container">
 			<p>With the support of</p>
 			<img src="images/japan-logo.png" alt="JapanGov The Government of Japan" />
 		</div>
-	</section>
-	<section class="dk-blue tb-pad no-m">
+	</div>
+	<div class="section dk-blue tb-pad no-m">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
@@ -192,8 +206,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </footer>
+
+<div class="media-test"></div>
 
 </body>
 </html>

@@ -48,14 +48,18 @@ header {
 			}
 
 			@media (min-width: @screen-sm-min) {
+				height: 2.75rem;
 
 				&.oecd-logo {
-					margin-right: @margin-base;
+					margin-right: @margin-base*.5;
+					width: 11.3rem;
 				}
 
 				&.beps-logo {
 					float: right;
 					background-position: top right;
+					width: 21rem;
+					height: 2.75rem;
 				}
 			}
 
@@ -65,10 +69,12 @@ header {
 				&.oecd-logo {
 					background-image: url(../images/oecd-logo.png);
 					width: 11.3rem;
+					margin-right: @margin-base;
 				}
 
 				&.g20-logo {
 					width: 4.2rem;
+					height: 3.25rem;
 				}
 
 				&.beps-logo {
@@ -82,10 +88,12 @@ header {
 
 				&.oecd-logo {
 					width: 14.2rem;
+					margin-right: @margin-base*2;
 				}
 
 				&.g20-logo {
 					width: 5.25rem;
+					height: 4.3rem;
 				}
 
 				&.beps-logo {
@@ -99,7 +107,7 @@ header {
 			padding: @padding-base*.5 0;
 
 			@media (min-width: @screen-sm-min) {
-				width: 18.75rem;
+				width: 20.75rem;
 				float: right;
 			}
 
@@ -139,33 +147,105 @@ header {
 		background: @dk-blue;
 		color: @white;
 
+		a {
+
+			&.open-menu {
+				display: none;
+
+				&:link, &:active, &:visited {
+					width: 1.875rem;
+					height: 1.5rem;
+					background-size: auto 100%;	
+					background-position: top left;
+					background-repeat: no-repeat;
+					background-image: url(../images/menu.svg);
+					text-indent: -2000rem;
+					margin: @margin-base 0;
+					float: right;
+
+					&.open {
+						background-image: url(../images/menu-close.svg);
+					}
+
+					@media (min-width: @screen-md-min) {
+						display: none;
+					}
+				}
+			}
+		}
+
 		ul {
 			.remove-list-style();
 			padding: @padding-base*.5 0 @padding-base*.75;
 			font-weight: 700;
 			text-transform: uppercase;
+			width: 80%;
 
 			@media (min-width: @screen-md-min) {
 				display: flex;
+				width: 100%;
 				justify-content: space-between;
 				padding: @padding-base*.75 0;
 			}
 
-			a {
+			li {
+				position: relative;
 
-				&:link, &:active, &:visited {
-					text-decoration: none;
-					color: @white;
-					display: inline-block;
-					padding: @padding-base*.5 0;
-					border-bottom: 2px solid @dk-blue;
+				a {
+
+					&:link, &:active, &:visited {
+						text-decoration: none;
+						color: @white;
+						display: inline-block;
+						padding: @padding-base*.5 0;
+						border-bottom: 2px solid @dk-blue;
+					}
+					&:focus, &:hover,
+					&.selected {
+						text-decoration: none;
+						border-bottom: 2px solid @white;
+					}
+
+					span {
+						display: none;
+						border-left: 2px solid @white;
+						border-bottom: 2px solid @white;
+						height: 10px;
+						width: 10px;
+						transform: rotate(-45deg);
+						margin-left: 1rem;
+						margin-bottom: 3px;
+					}	
+
+					&.open {
+
+						span {
+							transform: rotate(135deg);
+							margin-bottom: -1px;
+						}
+					}
 				}
-				&:focus, &:hover,
-				&.selected {
-					text-decoration: none;
-					border-bottom: 2px solid @white;
+
+				ul {
+					text-transform: none;
+					padding-left: @padding-base;
+					background: @dk-blue;
+					display: none;
+					z-index: 1000;
+
+					@media (min-width: @screen-md-min) {
+						position: absolute;
+						top: 3rem;
+						left: -2rem;
+						width: 20rem;
+						padding: @padding-base*1.5 @padding-base*2;
+
+						li {
+							display: block;
+						}
+					}
 				}
-			}	
+			}
 		}	
 	}
 }
@@ -174,7 +254,7 @@ header {
 // -- Footer
 footer {
 	
-	section {
+	> div {
 
 		&.lt-grey {
 

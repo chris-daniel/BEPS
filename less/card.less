@@ -1,0 +1,45 @@
+.card {
+	display: block;
+	margin-bottom: @margin-base;
+	
+	div {
+		background: @white;
+		padding: @padding-base;
+		height: 100%;
+		padding-bottom: @padding-base*5;
+		position: relative;
+
+		h3 {
+			font-size: @font-size-base * 1.375;
+		}
+
+		p {
+			color: @black;
+			font-size: @font-size-base * .85;
+			position: absolute;
+			bottom: 0;
+
+			span {
+				display: block;
+				width: 40px;
+				height: 4px;
+				background: var(--fullcolor);
+				margin-bottom: @margin-base*1.5;
+			}
+		}
+	}
+
+	&.grey {
+
+		div {
+			background: @grey;
+		}
+	}
+
+	&:focus, &:hover {
+
+		div {
+			background: @dk-grey;
+		}
+	}
+}

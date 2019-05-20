@@ -1,0 +1,96 @@
+.carousel-container {
+	overflow: hidden;
+
+	.carousel {
+
+		@media (min-width: 512px) {
+			width: 1024px;
+		}
+
+		@media (min-width: @screen-sm-min) {
+			width: 1000px;
+		}
+
+		@media (min-width: @screen-md-min) {
+			width: 1292px;
+		}
+
+		@media (min-width: @screen-lg-min) {
+			width: 1560px;
+		}
+
+		@media (min-width: @screen-xlg-min) {
+			width: 1812px;
+		}
+
+		div {
+
+			.card {
+				
+				> a {
+					display: block;
+					background: @white;
+					margin: 0 15px;
+					text-decoration: none;
+				}
+
+				@media (min-width: 512px) {
+					width: 512px;
+				}
+
+				@media (min-width: @screen-sm-min) {
+					width: 250px;
+				}
+
+				@media (min-width: @screen-md-min) {
+					width: 323px;
+				}
+
+				@media (min-width: @screen-lg-min) {
+					width: 390px;
+				}
+
+				@media (min-width: @screen-xlg-min) {
+					width: 453px;
+				}
+			}
+		}
+	}
+}
+
+
+button {
+
+	&[class*='carousel-'] {
+		position: absolute;
+		top: .5rem;
+		right: 15px;
+		height: 32px;
+		width: 18px;
+		background-size: auto 100%;	
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		border: 0;
+		text-indent: -2000rem;
+
+		&.carousel-next {
+			background-image: url(../images/arrow-right.svg);
+		}
+		&.carousel-prev {
+			background-image: url(../images/arrow-left.svg);
+			right: 48px;
+		}
+
+		@media (min-width: @screen-md-min) {
+			height: 42px;
+			width: 24px;
+
+			&.carousel-prev {
+				right: 59px;
+			}
+		}
+	}
+}
+
+

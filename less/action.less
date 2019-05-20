@@ -1,0 +1,70 @@
+.action {
+	display: block;
+	margin-bottom: @margin-base;
+
+	@media (min-width: @screen-sm-min) {
+		margin-bottom: @margin-base*2;
+	}
+
+	@media (min-width: @screen-md-min) {
+		min-height: 27rem;
+	}
+	
+	> div {
+		background-size: cover;	
+		background-position: center;
+		height: 100%;
+
+		> div {
+			background-color: fade(@dk-blue, 50%);
+			height: 100%;
+
+			@media (min-width: @screen-md-min) {
+				display: flex;
+			}
+
+			div {
+				padding: @padding-base*1.5 @padding-base*1.5 @padding-base*2;
+				align-self: flex-end;
+
+				em {
+					float: left;
+					clear: both;
+				}
+
+				h2 {
+					clear: both;
+					padding-top: @padding-base*.5;
+					font-size: @font-size-base * 2;
+					margin: 0 0 0 0;
+
+					span {
+						font-size: @font-size-base;
+						font-weight: 400;
+						display: block;
+						background: transparent;
+					}
+				}
+
+				.snippet {
+					padding: 0;
+					overflow: hidden;
+
+					p {
+
+						&:last-child {
+							font-weight: 700;
+							text-transform: uppercase;
+							text-align: right;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&:link, &:active, &:visited {
+		color: @white;
+	}
+}

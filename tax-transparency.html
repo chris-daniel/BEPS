@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>BEPS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,9 @@
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Roboto:400,400i,700,700i" rel="stylesheet">
 <link href="css/default.css" media="screen" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/general.js"></script>
 
 </head>
 <body>
@@ -27,11 +30,20 @@
 			</div>
 		</div>
 	</div>
-	<nav>
+	<nav aria-label="Main navigation">
 		<div class="container">
+			<a href="" class="open-menu" aria-haspopup="true" aria-expanded="false">Show and hide the menu</a>
 			<ul>
 				<li><a href="">Home</a></li>
-				<li><a href="">About</a></li>
+				<li>
+					<a href="" class="sub-menu" aria-haspopup="true" aria-expanded="false">About <span></span></a>
+					<ul>
+						<li><a href="">Mission and impact</a></li>
+						<li><a href="">How the BEPS Project works</a></li>
+						<li><a href="">Tools for implementation</a></li>
+						<li><a href="">History of the G20 &amp; BEPS</a></li>
+					</ul>
+				</li>
 				<li><a href="">BEPS Actions</a></li>
 				<li><a href="">Bitesize BEPS</a></li>
 				<li><a href="" class="selected">Tax Transparency</a></li>
@@ -48,32 +60,28 @@
 				<p>Exchange of information is about achieving global tax co-operation through the implementation of international tax standards and other instruments to put an end to bank secrecy and tackle tax evasion.</p>
 			</div>
 		</header>
-		<section>
+		<section class="overflow">
 			<div class="container">
-				<h1 class="dash"><span></span>How it <span>works</span></h1>
+				<h2 class="dash"><span></span>How it <span>works</span></h2>
 				<div class="inline-copy">
-					<h2>Global Forum on Transparency and Exchange of Information for Tax Purposes</h2>
+					<h3>Global Forum on Transparency and Exchange of Information for Tax Purposes</h3>
 					<p>The Global Forum is a key international body working on the implementation of international standards on tax transparency. It ensures that these high standards of transparency and exchange of information for tax purposes are in place around the world through its monitoring and peer review activities.</p>
 					<a href="" class="button">Global Forum</a>
 				</div>
 			</div>
-		</section>
-		<section>
 			<div class="container">
 				<div class="inline-copy">
-					<h2>Automatic Exchange Portal</h2>
-					<h3>Online support for the implementation of automatic exchange of information in tax matters</h3>
+					<h3>Automatic Exchange Portal</h3>
+					<h4>Online support for the implementation of automatic exchange of information in tax matters</h4>
 					<p>Automatic exchange of information is the systematic and periodic transmission of tax information by countries to the residence country concerning various categories of income, such as dividends, interest, gross proceeds, royalties, salaries, pensions, etc. Find out more about the work of the OECD and the Global Forum on Transparency and Exchange of Information for Tax Purposes in this area, including the Common Reporting Standard.</p>
 					<a href="" class="button">Automatic Exchange Portal</a>
 				</div>
 			</div>
-		</section>
-		<section class="overflow">
 			<img src="images/temp.jpg" alt="" />
 			<div class="container">
 				<div class="inline-copy">
-					<h2>Automatic Exchange Portal</h2>
-					<h3>Online support for the implementation of automatic exchange of information in tax matters</h3>
+					<h3>Automatic Exchange Portal</h3>
+					<h4>Online support for the implementation of automatic exchange of information in tax matters</h4>
 					<p>Automatic exchange of information is the systematic and periodic transmission of tax information by countries to the residence country concerning various categories of income, such as dividends, interest, gross proceeds, royalties, salaries, pensions, etc. Find out more about the work of the OECD and the Global Forum on Transparency and Exchange of Information for Tax Purposes in this area, including the Common Reporting Standard.</p>
 					<a href="" class="button">Automatic Exchange Portal</a>
 				</div>
@@ -87,21 +95,21 @@
 						<a href="" class="col-sm-4 card">
 							<img src="images/temp.jpg" alt="" />
 							<div>
-								<h2>New database provides critical indicators for the analysis of BEPS</h2>
+								<h3>New database provides critical indicators for the analysis of BEPS</h3>
 								<p><span></span>JUNE 2018  |  <strong>DATABASE</strong></p>
 							</div>
 						</a>
 						<a href="" class="col-sm-4 card">
 							<img src="images/temp.jpg" alt="" />
 							<div>
-								<h2>New database provides critica</h2>
+								<h3>New database provides critica</h3>
 								<p><span></span>JUNE 2018  |  <strong>DATABASE</strong></p>
 							</div>
 						</a>
 						<a href="" class="col-sm-4 card">
 							<img src="images/temp.jpg" alt="" />
 							<div>
-								<h2>New database provides critica</h2>
+								<h3>New database provides critica</h3>
 								<p><span></span>JUNE 2018  |  <strong>DATABASE</strong></p>
 							</div>
 						</a>
@@ -113,30 +121,24 @@
 					<div>
 						<h1 class="dash"><span></span>News</h1>
 						<div class="row">
-							<div class="col-md-6">
-								<ul class="content-list news">
-									<li>
-										<h2><a href="">Public comments received on the possible solutions to the tax challenges of digitalisation</a></h2>	
-										<p>7 March 2019</p>
-									</li>
-									<li>
-										<h2><a href="">Public comments received on the possible solutions to the tax challenges of digitalisation</a></h2>	
-										<p>7 March 2019</p>
-									</li>
-								</ul>
-							</div>
-							<div class="col-md-6">
-								<ul class="content-list news">
-									<li>
-										<h2><a href="">Public comments received on the possible solutions to the tax challenges of digitalisation</a></h2>	
-										<p>7 March 2019</p>
-									</li>
-									<li>
-										<h2><a href="">Public comments received on the possible solutions to the tax challenges of digitalisation</a></h2>	
-										<p>7 March 2019</p>
-									</li>
-								</ul>
-							</div>
+							<ul class="content-list news snippet">
+								<li class="col-md-6">
+									<h3><a href="">Public comments received on the possible solutions to the tax challenges of digitalisation</a></h3>	
+									<p>7 March 2019</p>
+								</li>
+								<li class="col-md-6">
+									<h3><a href="">Public comments received on the possible solutions to the tax challenges of digitalisation</a></h3>	
+									<p>7 March 2019</p>
+								</li>
+								<li class="col-md-6">
+									<h3><a href="">Public comments received on the possible solutions to the tax challenges of digitalisation</a></h3>	
+									<p>7 March 2019</p>
+								</li>
+								<li class="col-md-6">
+									<h3><a href="">Public comments received on the possible solutions to the tax challenges of digitalisation</a></h3>	
+									<p>7 March 2019</p>
+								</li>
+							</ul>
 						</div>
 						<a href="" class="button">All news</a>
 					</div>
@@ -146,13 +148,13 @@
 	</article>
 </main>
 <footer>
-	<section class="lt-grey tb-pad no-m">
+	<div class="section lt-grey tb-pad no-m">
 		<div class="container">
 			<p>With the support of</p>
 			<img src="images/japan-logo.png" alt="JapanGov The Government of Japan" />
 		</div>
-	</section>
-	<section class="dk-blue tb-pad no-m">
+	</div>
+	<div class="section dk-blue tb-pad no-m">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
@@ -181,8 +183,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </footer>
+
+<div class="media-test"></div>
 
 </body>
 </html>
